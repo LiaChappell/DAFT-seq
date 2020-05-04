@@ -1,0 +1,15 @@
+Lia's collection of hacky scripts for detecting splice sites
+
+1. Split your BAM files into minus and plus strand with the first scripts
+--> Based on XS tags used by Tophat1/2.
+--> Probably works with HiSat2 but I haven't checked
+
+2. Use Thomas's scripts, EMBL files and the minus/plus BAM files to detect new splice sites
+--> List BAMs in same order as ls
+--> My downstream script assumes that minus strand BAM file will be listed first
+
+3. My script uses the output of script 2 to sort and categorise the new splice sites into groups, such as spliced UTRs, and makes use of the directionality of the data
+--> I've included the files that I generated from my 3D7 time course.
+
+4. The final script generates fully annotated transcript isoforms including the UTRs
+--> But it needs tidying a bit still, working on it!
